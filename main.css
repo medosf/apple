@@ -241,6 +241,10 @@ header img{
     align-items: center;
     text-align: center;
 }
+.four img{
+    background-position: center;
+    background-size: cover;
+}
 .four .watch-logos{
     margin-top: 5%;
 }
@@ -256,9 +260,11 @@ header img{
 /*five ------------------------------ */
 .products .five{
     background-image: url('https://www.apple.com/v/home/i/images/promos/apple-card/tile__cauwwcyyn9hy_large.jpg');
-    background-size:100% 70%;
+    /* background-size:100% 70%;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: bottom; */
+    background-position: center;
+    background-size: cover;
     background-color: rgb(204, 204, 204);
     text-align: center;
   
@@ -276,10 +282,23 @@ header img{
 }
 
 
-
+/* six ----------------------------------------------- */
 .products .six{
-    border: 1px solid black;
+    position: relative;
+    text-align: center;
+    background-color: rgb(250, 250, 250);
 }
+.six img{
+    width: 100%;
+}
+.six .six-head{
+    margin-top: 5%;
+}
+.six div{
+    margin-top: 10px;;
+}
+
+
 
 
 
@@ -313,8 +332,25 @@ footer > .content{
 
 
 /* -------------------------------------------media */
-@media (max-width: 850px){
+@media (max-width: 1025px){
     .products{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    .one, .two, .three, .four, .five, .six{
+        position: relative;
+        height: 70vh;
+        width: 100vw;
+        margin: 10px;
+
+    }
+}
+
+@media (min-width: 1300px){
+    .products{
+        grid-template-rows: 70vh 70vh 70vh;
+
     }
 }
