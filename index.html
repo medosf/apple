@@ -11,17 +11,19 @@
     <nav>
         <ul>
 
-            <li><i class="fa fa-bars " id="nav-mobile"></i></li>
+            <li><a href="#"><i class="fa fa-bars " id="nav-mobile"></i></a></li>
             <li><i class="fa fa-apple" style="font-size: 22px;"></i></li>
-            <li><a href="#">Mac</a></li>
-            <li><a href="#target-ipad">iPad</a></li>
-            <li><a href="#">iPhone</a></li>
-            <li><a href="#">Watch</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#"><i class="fa fa-search" style="font-size: 18px;"></i></a></li>
-            <li><a href="#"><i class='fa fa-shopping-bag style="font-size: 18px;' ></i></a></li>
+            <div id='collaps-menu'>
+                <li><a href="#">Mac</a></li>
+                <li><a href="#target-ipad">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Support</a></li>
+                <li id='search'><a href="#"><i class="fa fa-search" style="font-size: 18px;"></i></a></li>
+            </div>
+            <li ><a href="#"><i class='fa fa-shopping-bag style="font-size: 18px;' ></i></a></li>
 
         </ul>
 
@@ -162,7 +164,6 @@
                         <li><a href="#">Apple books</a></li>
                         <li><a href="#">Apple Card</a></li>
                         <li><a href="#">iCloud</a></li>
-                        <br>
                         <li><b>Account</b></li>
                         <li><a href="#">Manage your Apple ID/a></li>
                         <li><a href="#">Apple Store Account</a></li>
@@ -190,19 +191,20 @@
 
                 <div class="shop">
                     <ul>
-                        <li><b>Shop and Learn</b></li>
-                        <li><a href="#">Mac</a></li>
-                        <li><a href='#'>iPad</a></li>
-                        <li><a href="#">iPhone</a></li>
-                        <li><a href="#">Watch</a></li>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">Music</a></li>
-                        <li><a href="#">AirPods</a></li>
-                        <li><a href="#">HomePod</a></li>
-                        <li><a href="#">ipod touch</a></li>
-                        <li><a href="#">Accesories</a></li>
-                        <li><a href="#">Gift Cards</a></li>
-                    </ul>
+                        <li><b>For business</b></li>
+                        <li><a href="#">Apple and Business</a></li>
+                        <li><a href='#'>Shop for Business</a></li>
+                        <li><a href="#"><b>For Education</b></a></li>
+                        <li><a href="#">Apple and Education</a></li>
+                        <li><a href="#">Shop for K-12</a></li>
+                        <li><a href="#">Shop for College</a></li>
+                        <li><a href="#"><b>For Healthcare</b></a></li>
+                        <li><a href="#">Apple in Healthcare</a></li>
+                        <li><a href="#">Health on Apple Watch</a></li>
+                        <li><a href="#">Health Records on iPhone</a></li>
+                        <li><a href="#"><b>For Goverment</b></li>
+                        <li><a href="#">Shopfor Goverment</a></li>
+                        <li><a href="#">Shop for Vetrans and Military</a></li>
                 </div>
 
                 <div class="shop">
@@ -227,6 +229,19 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+        const hamburgerMenu = document.getElementById('nav-mobile');
+        hamburgerMenu.addEventListener('click',()=>{
+            const collaps = document.getElementById('collaps-menu');
+            const currentStyle = collaps.style.display;
+            if(currentStyle == 'none'){
+                collaps.style.display = 'block';
+                collaps.style.height = '100vh';
+            }else{
+                collaps.style.display = 'none';
+            }
+        })
+
+    </script>
 </body>
 </html>
